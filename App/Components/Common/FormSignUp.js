@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, Button, TextInput} from 'react-native';
+import { connect } from 'react-redux';
 
 //styles
 import styles from './Styles/FormLoginStyle';
 
-export default class FormSignUp extends Component {
+class FormSignUp extends Component {
   render() {
+    console.log("SIGN UP: ", this.props);
     return (
       <View style={styles.container}> 
         <View style={styles.containerInput}>
@@ -20,3 +22,12 @@ export default class FormSignUp extends Component {
     );
   }
 }
+
+
+const mapStateToProps = state => ({
+  name: state.AuthReducer.name,
+  email: state.AuthReducer.email,
+  password: state.AuthReducer.password
+})
+
+export default connect(mapStateToProps, null)(FormSignUp);
