@@ -15,9 +15,9 @@ export default class App extends Component {
         <View style={styles.containerInput}>
             <TextInput style={styles.textInput} placeholder="Email" />
             <TextInput style={styles.textInput} placeholder="Senha" />
-            <TouchableHighLight onPress={ () => Actions.formSignUp() }>
+            <TouchableHighlight onPress={ () => Actions.formSignUp() }>
               <Text style={styles.textSignUp}>Ainda não tem cadastro? Cadastre-se</Text>
-            </TouchableHighLight>
+            </TouchableHighlight>
         </View>
         <View style={styles.containerButton}>
             <Button title="Acessar" color="#115E54" onPress={() => false} />
