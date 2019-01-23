@@ -7,6 +7,7 @@ import { createStore } from 'redux';
 // import FormSignUp from '../Components/Common/FormSignUp';
 
 import Routes from './Routes';
+import reducers from './Redux/Reducers';
 
 export default class App extends Component {
   render() {

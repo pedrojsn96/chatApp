@@ -4,7 +4,7 @@ import {StyleSheet, Text, View, Button, TextInput} from 'react-native';
 //styles
 import styles from './Styles/FormLoginStyle';
 
-export default class App extends Component {
+export default class FormSignUp extends Component {
   render() {
     return (
       <View style={styles.container}> 

@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, Button, TextInput, TouchableHighlight} from 'react-native';
 import { Actions } from 'react-native-router-flux';
+import { connect } from 'react-redux';
 
 //styles
 import styles from './Styles/FormLoginStyle';
 
-export default class App extends Component {
+class FormLogin extends Component {
   render() {
+    console.log(this.props);
     return (
       <View style={styles.container}> 
         <View style={styles.containerHeader}>
@@ -26,3 +28,10 @@ export default class App extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  email: state.AuthReducer.email,
+  password: state.AuthReducer.password
+})
+
+export default connect(mapStateToProps, null)(FormLogin);
