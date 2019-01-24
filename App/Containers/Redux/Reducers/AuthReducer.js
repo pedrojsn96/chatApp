@@ -5,5 +5,12 @@ const INITIAL_STATE = {
 }
 
 export default (state = INITIAL_STATE, action) => {
+    if(action.type == "set_email"){
+        return { ...state, email: action.payload }
+    }
+    if(action.type == "set_password"){
+        return { ...state, password: action.payload }
+    }
+
     return state;
 }

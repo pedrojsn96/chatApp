@@ -2,21 +2,21 @@ import React, {Component} from 'react';
 import {StyleSheet, Text, View, Button, TextInput, TouchableHighlight} from 'react-native';
 import { Actions } from 'react-native-router-flux';
 import { connect } from 'react-redux';
+import { setEmail, setPassword } from '../../Containers/Redux/Actions/AuthActions'; 
 
 //styles
 import styles from './Styles/FormLoginStyle';
 
 class FormLogin extends Component {
   render() {
-    console.log(this.props);
     return (
       <View style={styles.container}> 
         <View style={styles.containerHeader}>
             <Text style={styles.titleHeader}> App de Mensagem</Text>
         </View>
         <View style={styles.containerInput}>
-            <TextInput style={styles.textInput} placeholder="Email" />
-            <TextInput style={styles.textInput} placeholder="Senha" />
+            <TextInput value={this.props.email} style={styles.textInput} placeholder="Email" onChangeText={(text) => this.props.setEmail(text)} />
+            <TextInput value={this.props.password} style={styles.textInput} placeholder="Senha" onChangeText={(password) => this.props.setPassword(password)} />
             <TouchableHighlight onPress={ () => Actions.formSignUp() }>
               <Text style={styles.textSignUp}>Ainda não tem cadastro? Cadastre-se</Text>
             </TouchableHighlight>
@@ -34,4 +34,4 @@ const mapStateToProps = state => ({
   password: state.AuthReducer.password
 })
 
-export default connect(mapStateToProps, null)(FormLogin);
+export default connect(mapStateToProps, { setEmail, setPassword })(FormLogin);
