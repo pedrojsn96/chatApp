@@ -16,8 +16,8 @@ class FormLogin extends Component {
               <Text style={styles.titleHeader}> App de Mensagem</Text>
           </View>
           <View style={styles.containerInput}>
-              <TextInput value={this.props.email} style={styles.textInput} placeholder="Email" onChangeText={(text) => this.props.setEmail(text)} />
-              <TextInput secureTextEntry value={this.props.password} style={styles.textInput} placeholder="Senha" onChangeText={(password) => this.props.setPassword(password)} />
+              <TextInput value={this.props.email} style={styles.textInput} placeholder="Email" placeholderTextColor="#fff" onChangeText={(text) => this.props.setEmail(text)} />
+              <TextInput secureTextEntry value={this.props.password} style={styles.textInput} placeholder="Senha" placeholderTextColor="#fff" onChangeText={(password) => this.props.setPassword(password)} />
               <TouchableHighlight onPress={ () => Actions.formSignUp() }>
                 <Text style={styles.textSignUp}>Ainda não tem cadastro? Cadastre-se</Text>
               </TouchableHighlight>

@@ -17,13 +17,15 @@ export default StyleSheet.create({
         flex: 2
     },
     titleHeader: {
-        fontSize: 25
+        fontSize: 25,
+        color: "#fff"
     },
     textInput: {
         fontSize: 20,
         height: 45
     },
     textSignUp: {
-        fontSize: 20
+        fontSize: 20,
+        color: "#fff"
     }
 })

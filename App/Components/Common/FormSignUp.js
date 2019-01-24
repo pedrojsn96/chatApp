@@ -11,9 +11,9 @@ class FormSignUp extends Component {
       <ImageBackground source={require('../../Images/bg.png')} style={{ flex: 1, width: null }}>
         <View style={styles.container}> 
           <View style={styles.containerInput}>
-              <TextInput value={this.props.name} style={styles.textInput} placeholder="Nome" onChangeText={(name) => this.props.setName(name)} />
-              <TextInput value={this.props.email} style={styles.textInput} placeholder="Email" onChangeText={(text) => this.props.setEmail(text)} />
-              <TextInput secureTextEntry value={this.props.password} style={styles.textInput} placeholder="Senha" onChangeText={(password) => this.props.setEmail(password)} />
+              <TextInput value={this.props.name} style={styles.textInput} placeholder="Nome" placeholderTextColor="#fff" onChangeText={(name) => this.props.setName(name)} />
+              <TextInput value={this.props.email} style={styles.textInput} placeholder="Email" placeholderTextColor="#fff" onChangeText={(text) => this.props.setEmail(text)} />
+              <TextInput secureTextEntry value={this.props.password} style={styles.textInput} placeholder="Senha" placeholderTextColor="#fff" onChangeText={(password) => this.props.setEmail(password)} />
           </View>
           <View style={styles.containerButton}>
               <Button title="Cadastrar" color="#115E54" onPress={() => false} />
