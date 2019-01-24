@@ -16,7 +16,7 @@ class FormLogin extends Component {
         </View>
         <View style={styles.containerInput}>
             <TextInput value={this.props.email} style={styles.textInput} placeholder="Email" onChangeText={(text) => this.props.setEmail(text)} />
-            <TextInput value={this.props.password} style={styles.textInput} placeholder="Senha" onChangeText={(password) => this.props.setPassword(password)} />
+            <TextInput secureTextEntry value={this.props.password} style={styles.textInput} placeholder="Senha" onChangeText={(password) => this.props.setPassword(password)} />
             <TouchableHighlight onPress={ () => Actions.formSignUp() }>
               <Text style={styles.textSignUp}>Ainda não tem cadastro? Cadastre-se</Text>
             </TouchableHighlight>
