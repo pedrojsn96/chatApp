@@ -15,5 +15,9 @@ export default StyleSheet.create({
     textInput: {
         fontSize: 20,
         height: 45
+    },
+    errorSignUp: {
+        color: '#ff00000', 
+        fontSize: 18
     }
 })

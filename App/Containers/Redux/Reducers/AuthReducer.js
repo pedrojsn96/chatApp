@@ -1,7 +1,8 @@
 const INITIAL_STATE = {
     name: '',
     email: '',
-    password: ''
+    password: '',
+    errorSignUp: ''
 }
 
 export default (state = INITIAL_STATE, action) => {
@@ -13,6 +14,9 @@ export default (state = INITIAL_STATE, action) => {
     }
     if(action.type == "set_name"){
         return { ...state, name: action.payload }
+    }
+    if(action.type == "create_user_error"){
+        return { ...state, errorSignUp: action.payload }
     }
 
     return state;

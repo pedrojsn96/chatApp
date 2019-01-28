@@ -36,8 +36,8 @@ const _successAddUser = (dispatch) => {
 }
 
 const _errorAddUser = (error, dispatch) => {
-    alert(error.message);
-    dispatch ( { type: "create_user_error" } );
+    // alert(error.message);
+    dispatch ( { type: "create_user_error", payload: error.message } );
 }
 
 

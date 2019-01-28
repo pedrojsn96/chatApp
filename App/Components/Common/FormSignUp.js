@@ -25,6 +25,7 @@ class FormSignUp extends Component {
               <TextInput value={this.props.name} style={styles.textInput} placeholder="Nome" placeholderTextColor="#fff" onChangeText={(name) => this.props.setName(name)} />
               <TextInput value={this.props.email} style={styles.textInput} placeholder="Email" placeholderTextColor="#fff" onChangeText={(text) => this.props.setEmail(text)} />
               <TextInput secureTextEntry value={this.props.password} style={styles.textInput} placeholder="Senha" placeholderTextColor="#fff" onChangeText={(password) => this.props.setEmail(password)} />
+              <Text style={styles.errorSignUp}>{this.props.errorSignUp}</Text>
           </View>
           <View style={styles.containerButton}>
               <Button title="Cadastrar" color="#115E54" onPress={this._createUser()} />
@@ -39,7 +40,8 @@ class FormSignUp extends Component {
 const mapStateToProps = state => ({
   name: state.AuthReducer.name,
   email: state.AuthReducer.email,
-  password: state.AuthReducer.password
+  password: state.AuthReducer.password,
+  errorSignUp: state.AuthReducer.errorSignUp
 })
 
 export default connect(mapStateToProps, { setEmail, setPassword, setName, createUser })(FormSignUp);
