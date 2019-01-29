@@ -15,6 +15,9 @@ export default (state = INITIAL_STATE, action) => {
     if(action.type == "set_name"){
         return { ...state, name: action.payload }
     }
+    if(action.type == "create_user_success"){
+        return { ...state, name: '', password: '' }
+    }
     if(action.type == "create_user_error"){
         return { ...state, errorSignUp: action.payload }
     }

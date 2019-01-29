@@ -24,7 +24,7 @@ class FormSignUp extends Component {
           <View style={styles.containerInput}>
               <TextInput value={this.props.name} style={styles.textInput} placeholder="Nome" placeholderTextColor="#fff" onChangeText={(name) => this.props.setName(name)} />
               <TextInput value={this.props.email} style={styles.textInput} placeholder="Email" placeholderTextColor="#fff" onChangeText={(text) => this.props.setEmail(text)} />
-              <TextInput secureTextEntry value={this.props.password} style={styles.textInput} placeholder="Senha" placeholderTextColor="#fff" onChangeText={(password) => this.props.setEmail(password)} />
+              <TextInput secureTextEntry value={this.props.password} style={styles.textInput} placeholder="Senha" placeholderTextColor="#fff" onChangeText={(password) => this.props.setPassword(password)} />
               <Text style={styles.errorSignUp}>{this.props.errorSignUp}</Text>
           </View>
           <View style={styles.containerButton}>
